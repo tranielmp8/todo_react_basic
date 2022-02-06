@@ -8,9 +8,9 @@ export default function Main() {
   }
   const taskListContent = taskList.map((taskItem, index)=>{
     return (
-      <div className="list-item justify-content-center ">
+      <div key={index} className="list-item justify-content-center ">
         <p>{taskItem}</p>
-        <i class="fas fa-trash-alt delete" onClick={deleteTask(index)} ></i>
+        <i className="fas fa-trash-alt delete" onClick={()=>deleteTask(index)} ></i>
       </div>
     )
   })
